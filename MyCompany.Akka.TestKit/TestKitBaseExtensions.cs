@@ -6,7 +6,7 @@ namespace MyCompany.Akka.TestKit
     {
         static public async Task ExpectLogNoWarningsNorErrorsAsync(this global::Akka.TestKit.Xunit2.TestKit x, Func<Task> actionAsync) => await x.EventFilter
             .Custom(logEvent => Predicate(logEvent))
-            .ExpectAsync(0, actionAsync, TimeSpan.FromMilliseconds(1));
+            .ExpectAsync(0, actionAsync, TimeSpan.FromMilliseconds(3000));
 
         private static bool Predicate(LogEvent logEvent)
         {

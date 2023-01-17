@@ -9,7 +9,7 @@ namespace MyCompany.Akka.TestKit
         public ExpectLogNoWarningsNorErrorsAsyncSpecs(ITestOutputHelper output) : base(@"
 akka 
 {
-    # test.single-expect-default = 00ms
+    test.single-expect-default = 3000ms
     stdout-loglevel = DEBUG
     loglevel = DEBUG
     log-config-on-start = on
